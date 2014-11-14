@@ -1,3 +1,14 @@
+function celdaDisponible(grid,x,y){
+	var i;
+	var j;
+	for(i=x; i<grid.length; i++){
+		for(j=y; j<grid.length; j++){
+			if(grid[i][j]==0){
+				return [i,j];
+			}
+		}
+	}
+}
 
 function hackPrintMatriz(maat){
 	var ress="";
