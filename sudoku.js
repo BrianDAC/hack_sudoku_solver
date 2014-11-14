@@ -56,3 +56,18 @@ function main(){
 }
 
 main();
+
+
+
+function main(grin, x, y) {
+	var disp=celdaDisponible(grid,x,y);
+	var x=disp[0];
+	var y=disp[1];
+	if (x==-1 && y==-1) {
+		//Listo
+		return true
+	}
+	for(var i=)
+
+		// TERMINAR !!!
+}
