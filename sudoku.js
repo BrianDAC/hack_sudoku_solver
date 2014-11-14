@@ -41,9 +41,10 @@ function noConflicto(tablero,x,y,valor){
 			return false;
 
 	}
-
-	for (xx;xx<xx+3;xx++){
-		for (yy;yy<yy+3;yy++){
+	var lxx=xx+3;
+	var lyy=yy+3;
+	for (xx;xx<lxx;xx++){
+		for (yy;yy<lyy;yy++){
 			if (tablero[xx][yy]==valor && (xx!=x || yy!=y))
 				return false;
 		}
