@@ -8,6 +8,8 @@ function celdaDisponible(grid,x,y){
 			}
 		}
 	}
+
+	return [-1,-1];
 }
 
 function hackPrintMatriz(maat){
