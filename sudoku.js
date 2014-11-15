@@ -53,8 +53,18 @@ function noConflicto(tablero,x,y,valor){
 
 }
 
-
-function main(){
+var grid=[
+	[0,0,8,1,0,2,3,0,0],
+	[0,0,3,0,8,7,5,0,0],
+	[0,0,4,0,0,0,0,0,0],
+	[0,0,0,2,0,0,0,0,0],
+	[0,0,7,0,0,5,0,0,6],
+	[2,0,0,7,0,6,9,4,0],
+	[6,0,2,8,0,3,0,0,0],
+	[0,0,0,5,6,0,8,0,2],
+	[4,0,0,0,0,0,0,0,0]
+	];
+/*function main(){
 	var tablero=[
 	[0,0,8,1,0,2,3,0,0],
 	[0,0,3,0,8,7,5,0,0],
@@ -67,21 +77,25 @@ function main(){
 	[4,0,0,0,0,0,0,0,0]
 	];
 	console.log(hackPrintMatriz(tablero));
-}
+}*/
 
-main();
-
-
-
-function main(grin, x, y) {
+function main(grid, x, y) {
 	var disp=celdaDisponible(grid,x,y);
 	var x=disp[0];
 	var y=disp[1];
 	if (x==-1 && y==-1) {
 		//Listo
-		return true
+		return true;
 	}
-	for(var i=)
-
+	for(var i=1; i<=9; i++){
+		if (noConflicto(grid,x,y,i)) {
+			grid[x][y]=i;
+		}
+		if (main(grid,x,y)) {
+			return true;
+		}
+		grid[x][y]=0;
+	}
+		return false;
 		// TERMINAR !!!
 }
