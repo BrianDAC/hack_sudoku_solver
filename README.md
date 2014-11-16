@@ -1,3 +1,3 @@
 hack_sudoku_solver
 ==================
-Ola k ase
+Algoritmo que resuelve Sudoku's.
