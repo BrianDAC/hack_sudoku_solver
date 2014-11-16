@@ -90,9 +90,9 @@ function main(grid, x, y) {
 	for(var i=1; i<=9; i++){
 		if (noConflicto(grid,x,y,i)) {
 			grid[x][y]=i;
-		}
-		if (main(grid,x,y)) {
-			return true;
+			if (main(grid,x,y)) {
+				return true;
+			}
 		}
 		grid[x][y]=0;
 	}
